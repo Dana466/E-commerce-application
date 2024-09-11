@@ -14,9 +14,6 @@ mongoose.connect('mongodb://localhost:27017/EcommerceApp')
 .then(() => console.log('Connected to MongoDB'))
 .catch((err) => console.error('MongoDB connection error:', err));
 
-/*app.get('/protected', verifyToken, (req:CustomRequest, res) => {
-  res.send(`Hello ${req.user?.name}, you are authenticated!`);
-});*/
 app.get('/protected', verifyToken, (req:CustomRequest, res) => {
   const user = req.user;
 
@@ -50,24 +47,6 @@ app.post('/createuser',verifyToken,async (req:CustomRequest,res)=>{
   }
 })
 
-app.post('/addfavproduct',verifyToken,async (req:CustomRequest,res)=>{
-
-  const { productId } = req.body;
-  try {
-    const userid = req.user.uid;
-
-    const user = await User.findOneAndUpdate(
-      { uid: userid },
-      { $push: { favoriteProducts: productId } },
-      { new: true }
-    );
-
-    res.status(200).send({ message: 'Product added', user });
-  } catch(error){
-    res.status(400).send({ error: 'Error adding product', details: error });
-  }
-
-})
 
 
 app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
