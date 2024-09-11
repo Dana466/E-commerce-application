@@ -63,17 +63,6 @@ const Login: React.FC = () => {
     }
   };
 
-  const handlePasswordReset = async (e: React.FormEvent) => {
-    e.preventDefault();
-    const email = prompt('Please enter your email');
-    if (email) {
-      await sendPasswordResetEmail(auth, email);
-      alert('Email sent! Check your inbox for password reset instructions.');
-    } else {
-      alert('Email is required to reset the password.');
-    }
-  };
-
   return (
     <div>
       <Header pageName="login" /> {/* Pass the pageName prop */}
