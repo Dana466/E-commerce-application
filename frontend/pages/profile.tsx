@@ -118,37 +118,3 @@ await changeUserPassword(currentpass,newpass,Confirmpass,email);
 export default Profile;
 
 
-
-
-/*import React, { useEffect, useState } from "react";
-import { auth } from "../utils/firebaeSetup";
-import { User, onAuthStateChanged } from "firebase/auth";
-
-const Profile: React.FC = () => {
-  const [user, setUser] = useState<User| null>(null);
-
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      if (currentUser) {
-        setUser(currentUser);
-      } else {
-        console.log("No user is signed in.");
-      }
-    });
-
-    return unsubscribe;
-  }, []);
-
-  return (
-    <div>
-      <h1>User Profile</h1>
-      <h1>User Profile</h1>
-      <p><strong>Display Name:</strong> {user?.displayName || 'null'}</p>
-      <p><strong>Email:</strong> {user?.email || 'null'}</p>
-      <button><a href="/deleteaccount">Delete Account</a></button>
-    
-    </div>
-  );
-  };
-  
-  export default  Profile;*/
