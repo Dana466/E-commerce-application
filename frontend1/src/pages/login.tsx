@@ -100,7 +100,7 @@ const Login: React.FC = () => {
               </div>
               <div className="form_group">
                 <button className="form_btn">
-                  <a href="/shop" onClick={signinwithGoogle} className="form_link">
+                  <a href="/homepage" onClick={signinwithGoogle} className="form_link">
                     Log in with Google
                   </a>
                 </button>
