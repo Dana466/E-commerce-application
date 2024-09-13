@@ -33,8 +33,7 @@ const PasswordReset: React.FC = () => {
                         type="email" placeholder='type your email'
                         value={email}
                         onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
+                        required />
                 </label>
                 <button type="submit">Reset Password</button>
             </form>
