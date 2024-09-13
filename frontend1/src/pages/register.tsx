@@ -69,7 +69,7 @@ const signinWithGoogle = async (e: React.FormEvent) => {
   if (user) {
     
     alert(`You are already signed in as ${user.email}`);
-    navigate('/store'); 
+    navigate('/homepage'); 
     return;
   }
 
@@ -77,7 +77,7 @@ const signinWithGoogle = async (e: React.FormEvent) => {
     const response = await signInWithPopup(auth, new GoogleAuthProvider());
     console.log(response.user.uid);
     alert('Successful sign up with Google');
-    navigate('/store');
+    navigate('/homepage');
   } catch (error: any) {
     console.error(error);
 
