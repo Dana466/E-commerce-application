@@ -14,10 +14,10 @@ const Footer = () => {
         <div className="footer_item">
           <h3 className="footer_item_titl">Support</h3>
           <ul className="footer_list">
-            <li className="li footer_list_item">Stockholm, Sweden</li>
+            <li className="li footer_list_item">Lebanon, Bekaa</li>
             <li className="li footer_list_item">email@gmail.com</li>
-            <li className="li footer_list_item">+46 123 456 78</li>
-            <li className="li footer_list_item">+46 72 345 67</li>
+            <li className="li footer_list_item">+961 712 456 78</li>
+            <li className="li footer_list_item">+961 812 345 67</li>
           </ul>
         </div>
         <div className="footer_item">
